@@ -49,7 +49,6 @@ export class AppComponent {
 
   calulateIncome(cagr:any,timevalue:any,netincome:any){
    let value =  (Math.pow(parseFloat(cagr)+1,timevalue))+ ''
-
-    this.intialincome = parseFloat(value)*netincome
+   this.intialincome = parseFloat(value)*netincome
   }
 }
