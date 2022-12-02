@@ -1,0 +1,79 @@
+<section  class="section-space">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="">
+        <div class="">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <h5 class="card-title">WHat is Intrinsic Value ?</h5>
+              <ul>
+                <li>
+                  Intrinsic Value is the anticipated or calculated value of a company, stock, currency or product determined through fundamental analysis.
+
+
+                </li>
+                <li>It includes tangible and intangible factors.
+                </li>
+                <li>It is used for valuing companies and to find out whether they are overvalued or undervalued
+                </li>
+                <li>Intrinsic value is also called the real value (fair Value) and may or may not be the same as the current market value.
+
+                </li>
+                <li>Intrinsic Value can not be same for all. It depends on person what is the fair value of share for them to buy it. Because the real market value of company can be different for different investors.
+
+                </li>
+                <!-- <li> <img class="img-fluid" src="../assets/img/peformula.png" alt=""></li> -->
+
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Calculate Intrinsic value </h5>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Earnings per share (EPS)  </label>
+                    <input #epsvalue type="text" class="form-control"   placeholder="Enter Earnings per share (EPS) ">
+                  </div>
+                  <div class="form-group">
+                    <label  >Earnings Growth Rate</label>
+                    <input #growthrate type="text" class="form-control"   placeholder="Enter earnings growth rate">
+                  </div>
+
+                  <div class="form-group">
+                    <label  >PE Ratio</label>
+                    <input #peratio type="text" class="form-control"   placeholder="Enter earnings growth rate">
+                  </div>
+
+
+
+
+
+                  <div class="form-group">
+                    <label>IE = {{intrinsic |  number : '1.2-2'}} </label>
+
+                    <!-- <input type="text" class="form-control"   placeholder="Enter Number of Shares"> -->
+                  </div>
+
+                  <button (click)="calulateIe(epsvalue.value,growthrate.value ,peratio.value)" type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <iframe   [src]="safeSrc" frameborder="0" webkitallowfullscreen mozallowfullscreen
+      allowfullscreen></iframe>
+      <a href="https://www.youtube.com/@yogendrarajput1037" class="text-left ">Subscribe for more info.</a>
+            </div>
+
+          </div>
+
+
+
+
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

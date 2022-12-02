@@ -1,0 +1,69 @@
+<section  class="section-space">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="">
+        <div class="">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <h5 class="card-title">What will be the income of a company after few Years? </h5>
+              Here we will discuss how can we calculate Stock price will reach after few years. For our example we will
+               try to find the Stock price of Infosys after 5 years from now ({{ date | date:'d/MM/YY'}})
+               <br><br>
+
+               <img class="img-fluid" src="assets/img/netincomeformula.png"   alt="">
+               <br><br>
+
+
+            </div>
+            <br>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Calculate Net Income After Few Years? </h5>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Compounded Annual Growth Rate  </label>
+                    <input #cagr type="text" class="form-control"   placeholder="EnterCompounded Annual Growth Rate(not percentage) ">
+                  </div>
+                  <div class="form-group">
+                    <label  >Time</label>
+                    <input #timevalue type="text" class="form-control"   placeholder="Enter time">
+                  </div>
+
+                  <div class="form-group">
+                    <label  >Initial net Income</label>
+                    <input #income type="text" class="form-control"   placeholder="Enter Initial net Income">
+                  </div>
+
+
+
+
+
+                  <div class="form-group">
+                    <label>Final net Income = {{intialincome |  number : '1.2-2'}} </label>
+
+                    <!-- <input type="text" class="form-control"   placeholder="Enter Number of Shares"> -->
+                  </div>
+
+                  <button (click)="calulateIncome(cagr.value,timevalue.value,income.value)" type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <iframe   [src]="safeSrc" frameborder="0" webkitallowfullscreen mozallowfullscreen
+      allowfullscreen></iframe>
+      <a href="https://www.youtube.com/@yogendrarajput1037" class="text-left ">Subscribe for more info.</a>
+            </div>
+
+          </div>
+
+
+
+
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,63 @@
+<section class="section-space">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="">
+        <div class="">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <h5 class="card-title">What is EPS(Earning Per Share) ?</h5>
+              <p class="card-text text-justify text-14">Earnings per share (EPS) is the monetary value of earnings per outstanding share of common stock for a company. It is a key measure of corporate profitability and is commonly used to price stocks.[1]
+
+                In the United States, the Financial Accounting Standards Board (FASB) requires EPS information for the four major categories of the income statement: continuing operations, discontinued operations, extraordinary items, and net income.
+
+
+                <!-- For more info you can go through this video -->
+              </p>
+
+              <img class="img-fluid" src="../assets/img/formula.png"   alt="">
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">How to Calulate EPS</h5>
+                  <div class="form-group">
+                    <label  >Net Income of Company</label>
+                    <input #netincome type="text" class="form-control"   placeholder="Enter Net Income of Company">
+                  </div>
+                  <div class="form-group">
+                    <label  >Total Number of Shares</label>
+                    <input #totalshare type="text" class="form-control"   placeholder="Enter Number of Shares">
+                  </div>
+
+
+                  <div class="form-group">
+                    <!-- <label> EPS =  {{eps}} </label> -->
+                    <label>EPS = {{epssssssss }} </label>
+
+
+                    <!-- <input type="text" class="form-control"   placeholder="Enter Number of Shares"> -->
+                  </div>
+
+                  <button (click)="calulatEps(netincome.value,totalshare.value)" type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <iframe   [src]="safeSrc" frameborder="0" webkitallowfullscreen mozallowfullscreen
+      allowfullscreen></iframe>
+      <a href="https://www.youtube.com/@yogendrarajput1037" class="text-left ">Subscribe for more info.</a>
+            </div>
+
+          </div>
+
+
+
+
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

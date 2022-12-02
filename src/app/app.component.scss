@@ -1,23 +1,73 @@
-.section-space{
-  padding-top: 40px;
+mat-toolbar {
+  background: #004a9f;
+  color: white;
 }
-.text-14{
-  font-size: 14px;
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #002b5c;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
 }
-h5{
-  font-size: 18px;
+
+.content {
+  height: calc(100vh - 130px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  padding: 16px;
+
+  overflow: auto;
 }
-iframe{
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.menu-button {
   width: 100%;
-  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+
+  mat-icon {
+    margin-right: 8px;
+  }
 }
-@media only screen and (max-width: 600px) {
-iframe{
-  width: 100%;
-  min-height: 173px;
+
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
-  .ytp-large-play-button {
-    width: 35px !important;
-    height: 35px !important;
+
+.icon {
+  margin-top: 16px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
 }

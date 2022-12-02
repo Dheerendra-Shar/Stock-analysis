@@ -1,54 +1,45 @@
-import { Component } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Component, ViewChild } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
+import { delay, filter } from 'rxjs/operators';
+import { NavigationEnd, Router } from '@angular/router';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'stock-analysis';
-  safeSrc: SafeResourceUrl;
-  eps:number|undefined
+  @ViewChild(MatSidenav)
+ sidenav!: MatSidenav;
 
-  epsGrowth: any |undefined
-  pe: number|undefined
-  epssssssss: number|undefined
-  intrinsic: number|undefined
-  date: Date;
-  intialincome: any;
-  constructor(private sanitizer: DomSanitizer) {
-    this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/8q0PRKHUgZc");
-    this.date = new Date()
-  }
+  constructor(private observer: BreakpointObserver,private router: Router) {}
 
-  calulatEps(netincome:any,totalshare:any){
+  ngAfterViewInit() {
+    this.observer
+      .observe(['(max-width: 800px)'])
+      .pipe(delay(1), untilDestroyed(this))
+      .subscribe((res) => {
+        if (res.matches) {
+          this.sidenav.mode = 'over';
+          this.sidenav.close();
+        } else {
+          this.sidenav.mode = 'side';
+          this.sidenav.open();
+        }
+      });
 
-
-    this.epssssssss = netincome/totalshare;
-
-
-  }
-
-  calulatEpsgrowth(currentEPS:any,previousEPS:any,time:any){
-
-    this.epsGrowth = (Math.pow(currentEPS/previousEPS,1/time) -1 )*100 +"%"
-
-  }
-
-  calulatePe(marketvalue:any,eps:any){
-
-    this.pe= marketvalue/eps
-
-  }
-
-  calulateIe(eps:any,growthrate:any,peratio:any){
-    this.intrinsic = eps *(parseInt(growthrate)+1)*peratio
-
-  }
-
-  calulateIncome(cagr:any,timevalue:any,netincome:any){
-   let value =  (Math.pow(parseFloat(cagr)+1,timevalue))+ ''
-   this.intialincome = parseFloat(value)*netincome
+    this.router.events
+      .pipe(
+        untilDestroyed(this),
+        filter((e) => e instanceof NavigationEnd)
+      )
+      .subscribe(() => {
+        if (this.sidenav.mode === 'over') {
+          this.sidenav.close();
+        }
+      });
   }
 }

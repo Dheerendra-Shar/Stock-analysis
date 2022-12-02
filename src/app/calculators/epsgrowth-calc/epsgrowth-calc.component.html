@@ -1,0 +1,68 @@
+<section  class="section-space">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="">
+        <div class="">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <h5 class="card-title">EPS(Earning Per Share) Growth Rate ?</h5>
+              <p class="card-text text-justify text-14">In which rate the company’s EPS is growing.
+
+
+
+
+              </p>
+              <img class="img-fluid" src="assets/img/epsgrowth.png"   alt="">
+              <img class="img-fluid" src="assets/img/epsgrowthexample.png"   alt="">
+              <br>
+              <br>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">EPS Growth Rate</h5>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Current EPS</label>
+                    <input #currenteps type="text" class="form-control"   placeholder="Enter Current EPS">
+                  </div>
+                  <div class="form-group">
+                    <label  >Previous EPS</label>
+                    <input #previouseps type="text" class="form-control"   placeholder="Enter Previous EPS">
+                  </div>
+
+                  <div class="form-group">
+                    <label  >Time (in years)</label>
+                    <input #time type="text" class="form-control"   placeholder="Time (in years)">
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>EPS Growth % = {{epsGrowth |  number : '1.2-2'}} </label>
+                    <hr>
+                    <!-- <input type="text" class="form-control"   placeholder="Enter Number of Shares"> -->
+                  </div>
+
+                  <button (click)="calulatEpsgrowth(currenteps.value,previouseps.value,time.value)" type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <iframe   [src]="safeSrc" frameborder="0" webkitallowfullscreen mozallowfullscreen
+      allowfullscreen></iframe>
+      <a href="https://www.youtube.com/@yogendrarajput1037" class="text-left ">Subscribe for more info.</a>
+            </div>
+
+          </div>
+
+
+
+
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

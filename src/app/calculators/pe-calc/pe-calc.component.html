@@ -1,0 +1,71 @@
+<section  class="section-space">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="">
+        <div class="">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <h5 class="card-title">PE (Price To Earning) Ratio ?</h5>
+              <ul>
+                <li>
+              The ratio for valuing a company that measures its current share price relative to its per-share earnings.
+
+                </li>
+                <li>PE is basically how much an investor pays for each rupee of profit earned</li>
+                <li>It is used for valuing companies and to find out whether they are overvalued or undervalued
+                </li>
+                <li>According to many investors, Average PE Ratio Range: 20-25%.
+                </li>
+                <li>But Please keep in mind, for different industries the fair PE will be different, i.e. for one industry 10 PE ratio will be average where for another industry 80PE will be average.
+                </li>
+                <li>So we can’t say directly what is goo or Bad PE. It depends on Industry.</li>
+                <li> <img class="img-fluid" src="assets/img/peformula.png" alt=""></li>
+
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Calculate PE</h5>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Market Value Per Share </label>
+                    <input #maketvalue type="text" class="form-control"   placeholder="Market Value Per Share ">
+                  </div>
+                  <div class="form-group">
+                    <label  >Company Earning Per Share</label>
+                    <input #eps type="text" class="form-control"   placeholder="Company Earning Per Share">
+                  </div>
+
+
+
+
+
+                  <div class="form-group">
+                    <label>PE = {{pe |  number : '1.2-2'}} </label>
+                    <hr>
+                    <!-- <input type="text" class="form-control"   placeholder="Enter Number of Shares"> -->
+                  </div>
+
+                  <button (click)="calulatePe(maketvalue.value,eps.value)" type="submit" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <iframe   [src]="safeSrc" frameborder="0" webkitallowfullscreen mozallowfullscreen
+      allowfullscreen></iframe>
+      <a href="https://www.youtube.com/@yogendrarajput1037" class="text-left ">Subscribe for more info.</a>
+            </div>
+
+          </div>
+
+
+
+
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
