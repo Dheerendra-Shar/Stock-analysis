@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'calculators',
+    path: '',
     loadChildren: () =>
       import('./calculators/calculators-routing.module').then(
         (mod) => mod.CalculatorsRoutingModule
