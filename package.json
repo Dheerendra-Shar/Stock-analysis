@@ -21,6 +21,7 @@
     "@angular/router": "^14.0.0",
     "@ngneat/until-destroy": "^9.2.2",
     "bootstrap": "^4.6.0",
+    "boxicons": "^2.1.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.1",
     "popper.js": "^1.16.1",
