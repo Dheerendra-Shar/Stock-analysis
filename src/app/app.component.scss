@@ -25,7 +25,18 @@ $medium: 900px;
 mat-toolbar {
   background: #004a9f;
   color: white;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+
+
 }
+
+mat-sidenav-container{
+  margin-top: 75px;
+}
+
+
 
 mat-sidenav {
   margin: 16px;
@@ -38,19 +49,9 @@ mat-sidenav {
   text-align: center;
 }
 
-// div.scroll {
-//   margin:4px, 4px;
-//   padding:4px;
-//   background-color: green;
-//   width: 500px;
-//   height: 110px;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-//   text-align:justify;
-// }
 
 .content {
-  height: calc(100vh - 130px);
+  // height: calc(100vh - 130px);
   border-radius: 10px;
   margin: 16px;
   margin-left: 32px;
@@ -60,9 +61,9 @@ mat-sidenav {
   overflow: auto;
 }
 
-mat-sidenav-container {
-  height: calc(100vh - 65px);
-}
+// mat-sidenav-container {
+//   // height: calc(100vh - 65px);
+// }
 
 .menu-button {
   width: 100%;
@@ -73,6 +74,7 @@ mat-sidenav-container {
 
   mat-icon {
     margin-right: 8px;
+    vertical-align: baseline !important;
   }
 }
 
@@ -218,4 +220,7 @@ mat-divider {
       color: $text-white;
     }
   }
+}
+.mat-button .mat-button-wrapper>*, .mat-fab .mat-button-wrapper>*, .mat-flat-button .mat-button-wrapper>*, .mat-icon-button .mat-button-wrapper>*, .mat-mini-fab .mat-button-wrapper>*, .mat-raised-button .mat-button-wrapper>*, .mat-stroked-button .mat-button-wrapper>* {
+  vertical-align: baseline !important;
 }

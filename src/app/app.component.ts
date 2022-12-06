@@ -22,6 +22,7 @@ export class AppComponent {
       .observe(['(max-width: 800px)'])
       .pipe(delay(1), untilDestroyed(this))
       .subscribe((res) => {
+        console.log('res: ', res);
         if (res.matches) {
           this.sidenav.mode = 'over';
           this.sidenav.close();
