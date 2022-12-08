@@ -1,0 +1,23 @@
+.section-space{
+  padding-top: 40px;
+}
+.text-14{
+  font-size: 14px;
+}
+h5{
+  font-size: 18px;
+}
+iframe{
+  width: 100%;
+  min-height: 260px;
+}
+@media only screen and (max-width: 600px) {
+iframe{
+  width: 100%;
+  min-height: 173px;
+}
+  .ytp-large-play-button {
+    width: 35px !important;
+    height: 35px !important;
+}
+}

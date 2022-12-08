@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CagrComponent } from './cagr/cagr.component';
 import { EpsCalcComponent } from './eps-calc/eps-calc.component';
 import { EpsgrowthCalcComponent } from './epsgrowth-calc/epsgrowth-calc.component';
 import { IntrinsicValueComponent } from './intrinsic-value/intrinsic-value.component';
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path:'net-income',component:NetIncomeComponent
+  },
+  {
+    path:'cagr',component:CagrComponent
   }
 ];
 

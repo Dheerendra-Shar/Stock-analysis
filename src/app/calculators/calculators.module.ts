@@ -7,6 +7,7 @@ import { EpsgrowthCalcComponent } from './epsgrowth-calc/epsgrowth-calc.componen
 import { PeCalcComponent } from './pe-calc/pe-calc.component';
 import { IntrinsicValueComponent } from './intrinsic-value/intrinsic-value.component';
 import { NetIncomeComponent } from './net-income/net-income.component';
+import { CagrComponent } from './cagr/cagr.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NetIncomeComponent } from './net-income/net-income.component';
     EpsgrowthCalcComponent,
     PeCalcComponent,
     IntrinsicValueComponent,
-    NetIncomeComponent
+    NetIncomeComponent,
+    CagrComponent
   ],
   imports: [
     CommonModule,
