@@ -31,6 +31,9 @@ mat-toolbar {
 
 
 }
+.mat-drawer-backdrop.mat-drawer-shown {
+  display:none;
+}
 
 mat-sidenav-container{
   margin-top: 75px;
